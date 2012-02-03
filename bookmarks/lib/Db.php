@@ -30,6 +30,7 @@ class Db
         $stmt = self::$conn->prepare($sql);
         $stmt->execute($params);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $results = array();
         while ($resultRow = $stmt->fetch()) {
             $results[] = $resultRow;
         }

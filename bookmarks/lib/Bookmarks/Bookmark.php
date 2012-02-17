@@ -48,4 +48,9 @@ abstract class Bookmark
     {
         return $this->type;
     }
+
+    public static function foo()
+    {
+        echo "hello";
+    }
 }

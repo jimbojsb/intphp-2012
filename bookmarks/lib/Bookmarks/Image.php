@@ -4,6 +4,6 @@ class Image extends Bookmark
 {
     public function __toString()
     {
-        return '<img src="' . $this->data . '"/';
+        return '<img height="100" width="100" src="' . $this->data . '"/>';
     }
 }

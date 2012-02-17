@@ -16,7 +16,7 @@ class Db
      */
     public static function init($hostname, $username, $password, $database)
     {
-        $p = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
+        $p = new \PDO("mysql:host=$hostname;dbname=$database", $username, $password);
         self::$conn = $p;
     }
 
@@ -30,7 +30,7 @@ class Db
     {
         $stmt = self::$conn->prepare($sql);
         $stmt->execute($params);
-        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->setFetchMode(\PDO::FETCH_ASSOC);
         $results = array();
         while ($resultRow = $stmt->fetch()) {
             $results[] = $resultRow;

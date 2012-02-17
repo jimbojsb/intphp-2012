@@ -1,8 +1,9 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: josh
- * Date: 2/16/12
- * Time: 7:12 PM
- * To change this template use File | Settings | File Templates.
- */
+$myArray = array(1,2,3);
+//print_r($myArray);
+//print_r(unserialize(serialize($myArray)));
+
+$myObj->foo = 'bar';
+$myObj->name = 'josh';
+
+echo serialize($myObj);

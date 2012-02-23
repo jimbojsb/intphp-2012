@@ -1,7 +1,7 @@
 <?php
 require_once 'lib/autoload.php';
 Bookmarks\Db::init("localhost", "bookmarks", "bookmarks", "bookmarks");
-$bookmarks = \Bookmarks\BookmarkMapper::getAll();
+$bookmarks = \Bookmarks\BookmarkMapper::getByType(\Bookmarks\BookmarkMapper::TYPE_VIDEO);
 ?>
 
 <html>

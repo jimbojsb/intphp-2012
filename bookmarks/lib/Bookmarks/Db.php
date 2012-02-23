@@ -28,6 +28,10 @@ class Db
      */
     public static function query($sql, $params = array())
     {
+        if ($params && !is_array($params)) {
+            $params = array($params);
+        }
+
         $stmt = self::$conn->prepare($sql);
         $stmt->execute($params);
         $stmt->setFetchMode(\PDO::FETCH_ASSOC);

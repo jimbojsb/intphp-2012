@@ -1,6 +1,5 @@
 <?php
-namespace Bookmarks;
-class BookmarkMapper
+class Bookmarks_BookmarkMapper
 {
     const TYPE_LINK = 1;
     const TYPE_IMAGE = 2;

@@ -16,8 +16,10 @@ class Db
      */
     public static function init($hostname, $username, $password, $database)
     {
-        $p = new \PDO("mysql:host=$hostname;dbname=$database", $username, $password);
-        self::$conn = $p;
+        if (!(self::$conn instanceof PDO)) {
+            $p = new \PDO("mysql:host=$hostname;dbname=$database", $username, $password);
+            self::$conn = $p;
+        }
     }
 
     /**
